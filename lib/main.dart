@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techtaste/ui/_core/app_theme.dart';
 import 'package:techtaste/ui/splash/splash_screen.dart';
 
 void main() {
@@ -12,6 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Retorna o widget MaterialApp - estilização de app Google
-    return MaterialApp(home: SplashScreen());
+    return MaterialApp(theme: AppTheme.appTheme, home: SplashScreen());
   }
 }
