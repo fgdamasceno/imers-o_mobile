@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techtaste/ui/_core/app_colors.dart';
+import 'package:techtaste/ui/home/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -38,7 +39,19 @@ class SplashScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        // Navigator - faz a transicao entre telas
+                        // pushReplacement - coloca uma nova tela substituindo a antiga
+                        Navigator.pushReplacement(
+                          context,
+                          // faz o roteamento utilizando o Material app
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return HomeScreen();
+                            },
+                          ),
+                        );
+                      },
                       child: Text('Bora!'),
                     ),
                   ),
